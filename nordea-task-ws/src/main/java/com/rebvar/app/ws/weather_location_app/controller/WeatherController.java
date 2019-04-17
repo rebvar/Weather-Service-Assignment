@@ -25,7 +25,6 @@ import com.rebvar.app.ws.weather_location_app.model.response.LocationWeatherResp
 
 @RestController
 @RequestMapping("/weather")
-
 public class WeatherController {
 
 	@Autowired
@@ -93,7 +92,7 @@ public class WeatherController {
 	 * @return Adds an item to the favorites. Due to the three design options for this behaviours, a POST method is used. 
 	 * Can be PUT mapping as well. Returns an OperationResult value.  
 	 */
-	@GetMapping(path = {"/favorites"}, produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
+	@PostMapping(path = {"/favorites"}, produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
 	public LocationWeatherResponseModel AddToFavorites(@RequestBody UserFavoritesRequestModel fav, @RequestHeader(name = AppConstants.HEADER_STRING, defaultValue = AppConstants.INVALID_AUTH_DEFAULT_VALUE) String Auth_Token)
 	{
 		String userId = sutils.getUserIdFromToken(Auth_Token);
