@@ -62,7 +62,7 @@ public class WeatherController {
 	 * @param Auth_Token
 	 * @return search by city: Format : /weather/city/name of the city
 	 */
-	@PostMapping(path = "/city/{city}", produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
+	@GetMapping(path = "/city/{city}", produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
 	public LocationWeatherResponseModel getWeather(@PathVariable String city, @RequestHeader(name = AppConstants.HEADER_STRING, defaultValue = AppConstants.INVALID_AUTH_DEFAULT_VALUE) String Auth_Token)
 	{
 		String userId = sutils.getUserIdFromToken(Auth_Token);
@@ -78,7 +78,7 @@ public class WeatherController {
 	 * @return Search by lat and lon coordinates. Maps both options. Order is not important for lat and lon, 
 	 * as it maps both 
 	 */
-	@PostMapping(path = {"/lat/{lat}/lon/{lon}", "/lon/{lon}/lat/{lat}"}, produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
+	@GetMapping(path = {"/lat/{lat}/lon/{lon}", "/lon/{lon}/lat/{lat}"}, produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
 	public LocationWeatherResponseModel getWeather(@PathVariable double lat, @PathVariable double lon, @RequestHeader(name = AppConstants.HEADER_STRING, defaultValue = AppConstants.INVALID_AUTH_DEFAULT_VALUE) String Auth_Token)
 	{
 		String userId = sutils.getUserIdFromToken(Auth_Token);
@@ -93,7 +93,7 @@ public class WeatherController {
 	 * @return Adds an item to the favorites. Due to the three design options for this behaviours, a POST method is used. 
 	 * Can be PUT mapping as well. Returns an OperationResult value.  
 	 */
-	@PostMapping(path = {"/favorites"}, produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
+	@GetMapping(path = {"/favorites"}, produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
 	public LocationWeatherResponseModel AddToFavorites(@RequestBody UserFavoritesRequestModel fav, @RequestHeader(name = AppConstants.HEADER_STRING, defaultValue = AppConstants.INVALID_AUTH_DEFAULT_VALUE) String Auth_Token)
 	{
 		String userId = sutils.getUserIdFromToken(Auth_Token);
