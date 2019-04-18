@@ -53,7 +53,11 @@
 		</dependency>
 				
 				
-		
+		<dependency>
+		  <groupId>junit</groupId>     <!-- NOT org.junit here -->
+		  <artifactId>junit-dep</artifactId>
+		  <version>4.8.2</version>
+		</dependency>
 		
 		
 		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-engine -->
@@ -63,6 +67,14 @@
 		    <scope>test</scope>
 		</dependency>
 				
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.5.0-M1</version>
+			<scope>test</scope>
+		</dependency>
+
 				
 
 		<!-- https://mvnrepository.com/artifact/org.json/json -->
