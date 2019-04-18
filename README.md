@@ -2,6 +2,17 @@ This repository contains the source code for the location weather task. The proj
 
 Link to Frontend project: https://github.com/rebvar/Weather-Service-Assignment-Frontend
 
+# Run the code
+The code can be executed using spring tool suite or from command line using the following commands:
+```
+mvn dependency:tree
+```
+and after compilation and build: 
+
+```
+mvn spring-boot:run
+```
+
 # Implementation details and tools
 
 ## Development Environment
