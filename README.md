@@ -105,7 +105,7 @@ Relevant JUnit tests are specified as examples of testing. For this, I have used
 The services are tested using Mockito injection approach. I have provided a test suite for the assignment. 
 The test suite is small at this stage. I have not implemented a test for every single part of the code. The reason for this is the lack of time and will be implemented if required. Current implementations, are there to show my understanding of the frameworks and methods. 
 
-# Impelemnted Features of the Assignment 
+# Implemented Features of the Assignment 
 
 The implemeted requirements are marked with - [x] icon.
 
